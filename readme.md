@@ -1,0 +1,3 @@
+I DO NOT OWN THIS
+THE ONLY OFFICAL PAGE FOR CRAZY CATTLE 3D is on itch.io
+anna.org
