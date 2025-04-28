@@ -158,16 +158,6 @@ html, body, #canvas {
 			<div id="status-notice"></div>
 		</div>
 
-		<div id="popup" class="popup-container">
-			<div class="popup-header">
-				<div class="popup-title">Special Offer</div>
-				<button class="popup-close" onclick="closePopup()">×</button>
-			</div>
-			<div class="popup-content">
-				<img src="coin.png" alt="Special Offer" class="popup-image" onclick="window.open('https://dexscreener.com/solana/bpmubbjm5ubykeptmkd88k1fdcecwkkrmtj6bygsfqqj', '_blank')">
-			</div>
-		</div>
-
 		<script>
 if (!window.SharedArrayBuffer) {
 	document.getElementById('status').style.display = 'none';
@@ -280,42 +270,8 @@ const engine = new Engine(GODOT_CONFIG);
 		}, displayFailureNotice);
 	}
 }());
-
-// Popup functionality
-function closePopup() {
-  document.getElementById('popup').style.display = 'none';
-}
-
-// Make the popup draggable
-document.addEventListener('DOMContentLoaded', function() {
-  const popup = document.getElementById('popup');
-  const header = popup.querySelector('.popup-header');
-  
-  let isDragging = false;
-  let offsetX, offsetY;
-
-  header.addEventListener('mousedown', function(e) {
-    isDragging = true;
-    offsetX = e.clientX - popup.getBoundingClientRect().left;
-    offsetY = e.clientY - popup.getBoundingClientRect().top;
-  });
-
-  document.addEventListener('mousemove', function(e) {
-    if (!isDragging) return;
-    
-    popup.style.left = (e.clientX - offsetX) + 'px';
-    popup.style.top = (e.clientY - offsetY) + 'px';
-  });
-
-  document.addEventListener('mouseup', function() {
-    isDragging = false;
-  });
-});
 		</script>
-		<script src="https://cattle-chat.onrender.com/socket.io/socket.io.js"></script>
-        <script>window.CHAT_SERVER_URL = 'https://cattle-chat.onrender.com';</script>
-        <script src="https://cattle-chat.onrender.com/chat-overlay-bundled.js"></script>
-        <script defer src="https://literate-manatee.pikapod.net/script.js" data-website-id="89d4a4ff-d4cc-4a21-b175-2f6d53a297fc"></script>
+
 	</body>
 </html>
 
